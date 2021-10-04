@@ -1,0 +1,246 @@
+body {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans',  Calibri, 
+}
+* {
+    overflow: auto;
+    scroll-behavior: smooth;
+}
+
+header, footer {
+    min-height: 100vh;
+}
+
+/* Header design goes here */
+header {
+    background: url('images/bg3.jpg') fixed no-repeat;
+    background-size: 100% 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+header h1 {
+    margin-top: 0;
+    font-size: 2.50em;
+    color: black;
+    background: purple;
+    padding: 3%;
+}       
+header p#text-content {
+    text-align: center;
+    color:black;
+    background:rgb(209, 109, 142);
+    border: 1px  black;
+    border-radius: 10px;
+    font-size: 2.50em;
+    padding: 3%;
+    margin: 3%;
+}
+      
+header p#about {
+    text-align: center;
+    color:black;
+    background:rgb(209, 109, 142);
+    border: 1px  black;
+    border-radius: 10px;
+    font-size: 2.50em;
+    padding: 3%;
+    margin: 3%;
+}
+header a#down {
+    font-size:1.752em;
+    border-radius: 50%;
+    background: bl;
+    color:blueviolet;
+    align-self: center;
+    text-decoration: none;
+}
+
+/* Main design goes here */
+main {
+    background: palevioletred;
+}
+main div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+main div img {
+    width: 80%;
+    margin: 1%;
+    border-radius: 10px;
+}
+
+/* Our work slider code goes here */
+.mySlides {
+    display: none;
+    overflow: hidden;
+}
+.mySlides img {
+    width: 80vw;
+    vertical-align: middle;
+    overflow: hidden;
+}
+/* Slideshow container */
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+  overflow: hidden;
+  text-align: center;
+  margin: 2%;
+  padding: 0;
+}
+/* Caption text */
+.text {
+    font-family: sans-serif;
+    font-size: 1.25em;
+    text-align: center;
+}
+.active {
+  background-color: #717171;
+}
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+main div#dots {
+    display: none;
+}
+
+/* Customer feedback card design goes here */
+main div#customer-card {
+    font-size: 1.25em;
+    padding: 5%;
+    background: rgba(206, 141, 243, 0.699);
+    text-align: center;
+}
+main div#customer-card div {
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 5%;
+    background: rgb(62, 173, 168);
+    margin: 5% 0;
+}
+main div#customer-card p {
+    font-family: sans-serif;
+    font-style: italic;
+}
+main div#customer-card img {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+}
+
+/* Newsletter style goes here */
+main div#newsletter {
+    text-align: center;
+    background: rgba(221, 18, 187, 0.801);
+    font-size: 1.25em;
+    padding: 5%;
+    overflow: hidden;
+}
+main div#Suggestions input{
+    color: lightsalmon;
+    padding: 1%;
+    font-size: 1.25em;
+    width: 90%;
+    margin: 5%;
+    border-radius: 10px;
+}
+main div#Suggestions button {
+    display: inline-block;
+    width: 90%;
+    padding: 2%;
+    border: 1px solid black;
+    border-radius: 10px;
+    font-size: 1.25em;
+    margin-bottom: 50px;
+    background: purple;
+    color: white;
+}
+
+/* All the form style goes here */
+main div#form {
+    font-size: 1.50em;
+    background: lightblue;
+    min-height: 100vh   ;
+}
+main div#form form {
+    width: 90%;
+    padding: 2%;
+    text-align: center;
+    overflow: hidden;
+}
+main div#form form input {
+    width: 95%;
+    margin: 20px 0;
+    font-size: 1.15em;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 2%;
+}
+main div#form form button {
+    display: inline-block;
+    width: 90%;
+    padding: 2%;
+    border: 1px solid black;
+    border-radius: 10px;
+    font-size: 1.25em;
+    margin-top: 50px;
+    background: purple;
+    color: white;
+}
+
+/* Footer design goes here */
+footer {
+    background: rgba(122, 62, 146, 0.705);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+footer a {
+    color: white;
+    text-decoration: none;
+
+}
+footer div:first-child{
+    font-size: 1.50em;
+}
+footer div:nth-child(2){
+    font-size: 1.50em;
+}
+
+@media screen and (min-width: 900px) {
+    /* Shrink customer card div size */
+    main div#customer-card div {
+        width: 50%;
+    }
+    /* Shrink newletter signup page size */
+    main div#newsletter input, main div#newsletter button {
+        width: 50%;
+    }
+    /* Shrink form size on large device */
+    main div#form form {
+        width: 50%;
+    }
+}

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='style.css' />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100&display=swap" rel="stylesheet">
+    <title>Chimmy's Merch House</title>
+</head>
+
+<body>
+    <header>
+        <h1>
+            <center>
+                Chimmy's Merch House
+            </center>
+        </h1>
+        <p id='text-content'>
+            REDISCOVER A GREAT SHOPPING TRADITION
+        </p>
+        <div>
+            <p id="about"> 
+                We make best K-pop merches for you.<br>
+                We sell photocards, DIY Covers, Tees and Tops etc all at affordable Prices.
+            </p>
+        </div>
+
+        <a href='#main' title='Go down' id='down'>▼</a>
+        <br>
+    </header>
+
+    <main id='main'>
+        <div class="slideshow-container">
+            <h1>What we do:</h1>
+            <div class="mySlides fade">
+                <img src='images/bts.jpg' />
+                <div class="text">Aesthetic Photocards Of Your Beloved Groups</div>
+            </div>
+            <div class="mySlides fade">
+                <img src='images/merch.jpg' />
+                <div class="text">Best K-Pop Merch For You</div>
+            </div>
+            <div class="mySlides fade">
+                <img src='images/bangtan.jpg' />
+                <div class="text">Available At Affordable Prices</div>
+            </div>
+        </div>
+        <br />
+        <div style="text-align:center" id="dots">
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+        </div>
+          
+        <div id='customer-card'>
+            <h1>Meet Our Team</h1>
+            <div>
+                <img src='images/jkk.jpg' />
+                <h1>Jeon Jungkook</h1>
+                
+            </div>
+            <div>
+                <img src='images/rm.jpg' />
+                <h1>Kim Namjoon</h1>
+                
+            </div>
+                
+            <div>
+                <img src='images/jin.png' />
+                <h1>Kim Soekjin</h1>
+               
+            </div>
+            <div>
+                <img src='images/23.jpg' />
+                <h1>Kim Taehyung</h1>
+                
+            </div>
+            <div>
+                <img src='images/jm.jpg' />
+                <h1>Park Jimin</h1>
+                
+            </div>
+        </div>
+
+        <div id="Suggestions">
+            <h1>Reviews</h1>
+            <input type="text" placeholder="Here"/>
+            <button>Get Updates</button>
+        </div>
+
+        <div id="form">
+            <h1>Get in touch:</h1>
+            <form>
+                <input type='email' placeholder="Email please" />
+                <br />
+                <input type='text' placeholder="Name here" />
+                <br />
+                <input type='text' placeholder="Merch you want to buy" />
+                <br />
+                <button>Submit</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div>
+            <h3>Quicklinks:</h3>
+            <a href="#">Products</a>
+            <br />
+            <a href="#">Social media</a>
+            <br />
+            <a href="#">Trusted by</a>
+        </div>
+        <div>
+            <h3>follow us on:</h3>
+            🐵🙊🙉🙈
+        </div>
+        <div>
+            <i>&copy; 2021 by Chimmy's Merch House </i>
+        </div>
+    </footer>
+
+    <script>
+        var slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1}    
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";  
+        dots[slideIndex-1].className += " active";
+        setTimeout(showSlides, 3000); 
+        }
+    </script>
+</body>
+</html>
